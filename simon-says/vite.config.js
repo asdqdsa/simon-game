@@ -4,7 +4,7 @@ import autoprefixer from 'autoprefixer';
 import path from 'path';
 
 export default defineConfig({
-  base: '/asdqdsa-JSFE2024Q4/simon-says/',
+  base: '/simon-game/simon-says/',
   build: {
     assetsInclude: ['**/*.woff', '**/*.woff2', '**/*.ttf'],
     sourcemap: false, // Enables source maps for prod build
