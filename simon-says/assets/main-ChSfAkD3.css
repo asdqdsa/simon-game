@@ -1,0 +1,256 @@
+:root {
+  --dark-gray: #2e4b5a;
+  --gray: #2f4452;
+  --innactive: #677883;
+  --turquose: #30c5c0;
+  --turquose-dark: #56aca9;
+  --hover-keys: #74e4e0;
+  --active: #8fe7e4;
+  --yellow: #eeb559;
+  --yellow-dark: #c7bba738;
+  --hover-btn: #e9bb70;
+  --light-gray: #dddbdb;
+  --red: #dd5e73;
+  --green: #9fcf68;
+  --light-green: #96cc7d;
+  --black: #000;
+  --black-transparent: #00000048;
+  --color: #ecead2;
+  --font-family: verdana, geneva, tahoma, sans-serif;
+}
+
+body {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color: var(--gray);
+  block-size: 100vh;
+  font-family: var(--font-family);
+  inline-size: 100%;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 100%;
+  max-inline-size: 800px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  block-size: 100vh;
+  gap: 18px;
+  inline-size: 100%;
+  max-inline-size: 750px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  gap: 12px;
+  inline-size: 100%;
+  min-block-size: 50px;
+}
+
+.info {
+  color: var(--light-gray);
+  font-size: 20px;
+  min-block-size: 40px;
+  text-align: center;
+}
+
+.info-general {
+  display: inline;
+  color: var(--hover-keys);
+  font-size: 30px;
+  min-block-size: 80px;
+  text-align: center;
+}
+
+.info-user-sequence {
+  display: flex;
+  width: 80%;
+  height: 40px;
+  align-items: end;
+  justify-content: center;
+  color: var(--light-gray);
+  font-size: 28px;
+  min-block-size: 40px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  inline-size: 93%;
+}
+
+.keycap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  background-color: var(--turquose-dark);
+  block-size: 1.2em;
+  color: var(--black);
+  cursor: default;
+  font-size: 50px;
+  inline-size: 1.2em;
+}
+
+.keycap-effect {
+  background-color: var(--turquose);
+}
+
+.keycap-effect:active {
+  background-color: var(--active);
+}
+
+.keycap-highlight {
+  background-color: var(--active);
+}
+
+.highlight-correct {
+  background-color: var(--green);
+}
+
+.highlight-incorrect {
+  background-color: var(--red);
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px;
+  gap: 18px;
+}
+
+.difficulty {
+  color: var(--light-gray);
+  cursor: pointer;
+  font-size: 50px;
+}
+
+.diff-effect {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.hightlight-difficulty {
+  color: var(--yellow);
+}
+
+.innactive-difficulty {
+  color: var(--yellow-dark);
+}
+
+.start-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--yellow);
+  block-size: 60px;
+  color: var(--gray);
+  cursor: default;
+  font-size: 30px;
+  inline-size: 60%;
+}
+
+.help-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--light-gray);
+  block-size: 60px;
+  color: var(--gray);
+  font-size: 30px;
+  inline-size: 60%;
+}
+
+.btn-effect {
+  cursor: default;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.innactive {
+  background-color: var(--innactive);
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.next {
+  background-color: var(--green);
+  cursor: pointer;
+  -webkit-user-select: unset;
+     -moz-user-select: unset;
+          user-select: unset;
+}
+
+.off {
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.on {
+  cursor: pointer;
+  -webkit-user-select: unset;
+     -moz-user-select: unset;
+          user-select: unset;
+}
+
+@media (width < 568px) {
+  .start-btn {
+    font-size: 1.2em;
+  }
+  .help-btn {
+    font-size: 1.2em;
+  }
+  .keyboard {
+    gap: 1px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .next:hover {
+    background-color: var(--light-green);
+  }
+  .keycap-effect:hover {
+    background-color: var(--hover-keys);
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+  }
+  .diff-effect:hover {
+    cursor: default;
+  }
+  .btn-effect:hover {
+    background-color: var(--color);
+    cursor: pointer;
+  }
+}
